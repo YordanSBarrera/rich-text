@@ -6,10 +6,12 @@ const App = () => {
   const [text, setText] = useState<string>("");
 
   return (
-    <Card sx={{ width: "100%", alignContent: "center" }} variant="outlined">
-      <h2>Play with text</h2>
-      <Stack maxWidth="80%" alignItems="center">
-        <RichTextCard html={text} setHTML={(value) => setText(value)} />;
+    <Card variant="outlined">
+      <Stack width="100%" alignItems="center">
+        <h2>Play with text</h2>
+        <Stack width="90%" p={3}>
+          <RichTextCard html={text} setHTML={(value) => setText(value)} />
+        </Stack>
       </Stack>
     </Card>
   );
